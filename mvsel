@@ -1,0 +1,33 @@
+#!/bin/sh
+# ================================================================
+#  Move Plan View Selected 1.0.0.1, Copyright (c) 2013 Ma_Sys.ma.
+#  For further info send an e-mail to Ma_Sys.ma@web.de.
+# ================================================================
+
+if [ $# = 0 -o "$1" = "-h" -o "$1" = "--help" ]; then
+	echo "Usage $0 -d|dst"
+	echo "-d   Delete selected"
+	echo "dst  Move selected to dst"
+	exit 0
+fi
+
+if [ ! -f planview_sel.txt ]; then
+	echo planview_sel.txt does not exist.
+	exit 1
+fi
+
+if [ "$1" = "-d" ]; then
+	while read -r line; do
+		rm "$line"
+	done < planview_sel.txt
+	exit 0
+fi
+
+if [ ! -d "$1" ]; then
+	echo Directory $1 does not exist.
+	exit 1
+fi
+
+while read -r line; do
+	mv "$line" "$1"
+done < planview_sel.txt

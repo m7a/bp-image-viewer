@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project default="build">
+
+<!-- APPLICATION METADATA -->
+<property name="mdpc.name"      value="mdvl-image-viewer"/>
+<property name="mdpc.section"   value="utils"/>
+<property name="mdpc.descrs"    value="Scripts to display image files"/>
+<property name="mdpc.arch"      value="all"/>
+<property name="mdpc.depends"   value="feh, zenity, python-gtk2"/>
+<property name="mdpc.conflicts" value="mdvl-scripts (&lt;= 1.0.384)"/>
+<property name="mdpc.descrl">
+ Provides scripts which are useful in the context of image viewing.
+ The following scripts are provided:
+ plan_view.py     -- standalone image viewer for GTK2+Python
+ ma_plan_view_feh -- runs the `feh` image viewer with similar keybindings
+ mvsel            -- processes files from `planview_sel.txt` files.
+</property>
+
+<property name="mdpc.file.install">
+plan_view.py /usr/bin
+ma_plan_view_feh /usr/bin
+mvsel /usr/bin
+</property>
+
+<!-- CI INTEGRATION -->
+<target name="package_triggered" depends="package">
+	<property name="masysma.ci.trigger" value="newver"/>
+</target>
+
+<!-- CONSTANT TPL IMPORT -->
+<property environment="env"/>
+<condition property="masysma.internal.includepath.rel" value="${env.MDVL_CI_PHOENIX_ROOT}" else=".."><isset property="env.MDVL_CI_PHOENIX_ROOT"/></condition>
+<property name="masysma.internal.includepath" location="${masysma.internal.includepath.rel}"/>
+<property name="masysma.internal.loadpath" value="${masysma.internal.includepath}/co-build/ant-build-template.xml"/>
+<condition property="masysma.internal.load" value="file://${masysma.internal.loadpath}" else="https://raw.githubusercontent.com/m7a/co-build/master/ant-build-template.xml"><resourceexists><file file="${masysma.internal.loadpath}"/></resourceexists></condition>
+<import><url url="${masysma.internal.load}"/></import>
+
+</project>
