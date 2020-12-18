@@ -18,8 +18,9 @@ Introduction
 ============
 
 This repository provides Ma_Sys.ma _Image Viewer_ scripts. These are intended to
-supplement more heavyweight applications like `eog` by quick but feature-reduced
-scripts.
+supplement more heavyweight applications like
+[eog(1)](https://manpages.debian.org/buster/eog/eog.1.en.html) by quick but
+feature-reduced scripts.
 
 The idea behind these scripts stems from having many scanned-in pages and
 the need for some specific functions combined with keyboard-driven usage.
@@ -66,6 +67,9 @@ e                            Toggle honor exif information.
 m                            Toggle maximized.
 b                            Toggle dark background color.
 
+An older version of `plan_view.py` can also be found on
+<https://pastebin.com/BbRES3Ve>.
+
 ## Notable Features
 
 Notable features include
@@ -78,6 +82,11 @@ Notable features include
    or to-be-deleted images (depending on user's choice). The contents of
    `planview_sel.txt` can be processed manually or by supplementary script
    `mvsel`.
+
+## OS Information
+
+`plan_view.py` has only ever been tested on Linux systems. However, given that
+it is Python and GTK it may as well work on Windows, too.
 
 ## Script `mvsel`
 
@@ -119,3 +128,13 @@ be observed:
    (It is unclear why, but sometimes the `feh` instance from the previous
    directory will not close).
  * `feh` acts recursively by default.
+
+Reduced Features
+================
+
+While most image viewing tasks can be solved by means of the scripts provided
+here, there are some special cases for which programs like `eog` are better:
+
+ * zoom-intensive operations
+ * printing image files to paper
+ * animated images (e.g. `.gif` files)
