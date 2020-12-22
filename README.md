@@ -138,3 +138,10 @@ here, there are some special cases for which programs like `eog` are better:
  * zoom-intensive operations
  * printing image files to paper
  * animated images (e.g. `.gif` files)
+
+Bugs
+====
+
+A GTK-3-capable `plan_view.py` version may make sense.
+In the current state, it is not possible to install this package on Debian
+Testing (Bullseye) as per Python-GTK2 requirement.
