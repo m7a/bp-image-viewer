@@ -1,3 +1,9 @@
+mdvl-image-viewer (1.0.1) stable; urgency=medium
+
+  * Enable compatibility layer to allow running plan_view.py on GTK-3 systems.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Tue, 22 Dec 2020 23:06:03 +0100
+
 mdvl-image-viewer (1.0.0) stable; urgency=medium
 
   * Package created with MDPC 2

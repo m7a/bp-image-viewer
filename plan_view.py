@@ -1,15 +1,26 @@
 #!/usr/bin/python
-#
-# Thanks to http://www.dzone.com/snippets/python-example-simple
-#
 
-import gtk
-import gtk.gdk
+# Please note: This code was written for GTK 2.0 and will not be ported to
+#              Gtk 3.0. Users are advised to use `ma_plan_view_feh` and the
+#              `feh` image viewer instead. 
+
+# Thanks to http://www.dzone.com/snippets/python-example-simple
+# and       https://piware.de/2012/03/pygobject-3-1-92-released/
+
 import os
 import sys
 
+# -- begin compat layer --
+import gi.pygtkcompat
+gi.pygtkcompat.enable()
+gi.pygtkcompat.enable_gtk(version='3.0')
+import glib
+# -- end compat layer --
+import gtk
+import gtk.gdk
+
 # TODO Code not very well-structured, too many levels of indentation.
-# 	Long functions, which fields are declared?
+#      Long functions, which fields are declared?
 # TODO Recursive mode, allow file parameters
 
 class MaSysMaPlanView(gtk.Window):
@@ -525,7 +536,7 @@ class MaSysMaPlanView(gtk.Window):
 		certainly do not have an /usr directory."""
 		return
 """    Ma_Sys.ma Plan View, a simple keyboard only image viewer
-    Copyright (C) 2012, 2013  Ma_Sys.ma
+    Copyright (C) 2012, 2013, 2020  Ma_Sys.ma
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
