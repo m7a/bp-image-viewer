@@ -1,3 +1,9 @@
+mdvl-image-viewer (1.0.3) stable; urgency=medium
+
+  * 2nd attempt to fix dependency python-gi -> python3-gi.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Fri, 13 Aug 2021 01:28:23 +0200
+
 mdvl-image-viewer (1.0.2) stable; urgency=medium
 
   * Attempt to fix dependencies for use with Bullseye.
