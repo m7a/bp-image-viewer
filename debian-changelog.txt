@@ -1,3 +1,9 @@
+mdvl-image-viewer (1.0.2) stable; urgency=medium
+
+  * Attempt to fix dependencies for use with Bullseye.
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Fri, 13 Aug 2021 01:23:38 +0200
+
 mdvl-image-viewer (1.0.1) stable; urgency=medium
 
   * Enable compatibility layer to allow running plan_view.py on GTK-3 systems.
