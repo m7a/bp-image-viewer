@@ -7,7 +7,7 @@ lang: en-US
 author: ["Linux-Fan, Ma_Sys.ma (Ma_Sys.ma@web.de)"]
 keywords: ["mdvl", "shell", "script", "linux", "python", "images", "plan_view"]
 x-masysma-version: 1.0.0
-x-masysma-website: https://masysma.lima-city.de/32/image_viewer.xhtml
+x-masysma-website: https://masysma.net/32/image_viewer.xhtml
 x-masysma-repository: https://www.github.com/m7a/bp-image-viewer
 x-masysma-owned: 1
 x-masysma-copyright: |
